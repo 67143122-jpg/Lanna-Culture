@@ -1,4 +1,4 @@
-:root {
+:root {:root {
     --bg-color: #FFFFFF;
     --text-color: #333333;
     --text-light: #666666;
@@ -60,6 +60,11 @@ nav {
     align-items: center;
     border-bottom: 1px solid transparent;
     transition: var(--transition);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
 }
 
 nav.scrolled {
@@ -77,7 +82,7 @@ nav.scrolled {
 
 .nav-links {
     display: flex;
-    gap: 3rem;
+    gap: 1.2rem;
 }
 
 .nav-links a {
@@ -103,12 +108,13 @@ nav.scrolled {
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 6rem 1rem;
+    padding: 4rem 2rem;
     background: transparent;
     margin-bottom: 4rem;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+
 }
 
 .hero h1 {
@@ -127,21 +133,22 @@ nav.scrolled {
     animation: slideUp 1s ease 0.2s backwards;
 }
 
-/* Grids */
+
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
     margin-top: 2rem;
+    
 }
 
-/* Cards (Minimal) */
 .card {
     background: transparent;
-    padding: 0;
+    padding: 2rem;
     box-shadow: none;
     transition: var(--transition);
     border: none;
+    
 }
 
 .card:hover {
@@ -183,7 +190,7 @@ nav.scrolled {
     padding-bottom: 2px;
 }
 
-/* Section Content */
+
 .section-content {
     background: transparent;
     padding: 0;
@@ -198,7 +205,7 @@ nav.scrolled {
     text-align: left;
 }
 
-/* Footer */
+
 footer {
     text-align: center;
     padding: 4rem 2rem;
@@ -209,7 +216,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Animations */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -248,3 +255,16 @@ body.fade-out {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
+@media (max-width: 480px) {
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+    }
+        .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
