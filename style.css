@@ -133,21 +133,28 @@ nav.scrolled {
     animation: slideUp 1s ease 0.2s backwards;
 }
 
-/* Grids */
+
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
     margin-top: 2rem;
+    
 }
 
-/* Cards (Minimal) */
+
 .card {
     background: transparent;
-    padding: 0;
+    padding: clamp(1.25rem, 3vw, 2rem);
     box-shadow: none;
     transition: var(--transition);
     border: none;
+    
+}
+
+.card p {
+    word-break: normal;
+    overflow-wrap: anywhere;
 }
 
 .card:hover {
@@ -189,7 +196,7 @@ nav.scrolled {
     padding-bottom: 2px;
 }
 
-/* Section Content */
+
 .section-content {
     background: transparent;
     padding: 0;
@@ -204,7 +211,7 @@ nav.scrolled {
     text-align: left;
 }
 
-/* Footer */
+
 footer {
     text-align: center;
     padding: 4rem 2rem;
@@ -215,7 +222,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Animations */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -254,11 +261,14 @@ body.fade-out {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .nav-links {
         width: 100%;
         justify-content: center;
         flex-wrap: wrap;
         margin-top: 1rem;
+    }
+        .grid {
+        grid-template-columns: 1fr;
     }
 }
