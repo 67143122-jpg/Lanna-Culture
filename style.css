@@ -1,4 +1,4 @@
-:root {:root {
+:root {
     --bg-color: #FFFFFF;
     --text-color: #333333;
     --text-light: #666666;
@@ -142,6 +142,7 @@ nav.scrolled {
     
 }
 
+
 .card {
     background: transparent;
     padding: 2rem;
@@ -149,6 +150,11 @@ nav.scrolled {
     transition: var(--transition);
     border: none;
     
+}
+
+.card p {
+    word-break: normal;
+    overflow-wrap: anywhere;
 }
 
 .card:hover {
@@ -266,5 +272,3 @@ body.fade-out {
         grid-template-columns: 1fr;
     }
 }
-
-
