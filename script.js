@@ -36,16 +36,5 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 });
-<script>
-    const mapImage = document.querySelector('.map-image');
-    const mapPopup = document.getElementById('map-popup');
 
-    mapImage.addEventListener('click', () => {
-        mapPopup.classList.add('active');
-    });
-
-    mapPopup.addEventListener('click', () => {
-        mapPopup.classList.remove('active');
-    });
-</script>
 
